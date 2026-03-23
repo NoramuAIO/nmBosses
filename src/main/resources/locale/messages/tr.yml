@@ -1,0 +1,156 @@
+# ═══════════════════════════════════════════════════════════
+#                 nmBosses - Türkçe Mesajlar
+#                      Dil: Türkçe
+# ═══════════════════════════════════════════════════════════
+
+# Tüm mesajlar için ön ek
+prefix: "&8[&6nmBosses&8] "
+
+# Genel Mesajlar
+general:
+  no_permission: "&cBu komutu kullanmak için yetkiniz yok!"
+  player_only: "&cBu komutu sadece oyuncular kullanabilir!"
+  unknown_command: "&cBilinmeyen komut! /boss help yazın."
+  reload_success: "&aEklenti yeniden yüklendi!"
+  reload_count: "&7Yüklenen boss sayısı: &f{count}"
+  active_preserved: "&7Aktif boss'lar korundu ve ayarları güncellendi."
+
+# Boss Yönetimi
+boss:
+  not_found: "&cBu isimde bir boss bulunamadı!"
+  already_exists: "&cBu isimde bir boss zaten mevcut!"
+  created: "&aBoss başarıyla oluşturuldu: &f{id}"
+  deleted: "&aBoss başarıyla silindi: &f{id}"
+  create_error: "&cBoss oluşturulurken bir hata oluştu!"
+  delete_error: "&cBoss silinirken bir hata oluştu!"
+  spawned: "&aBoss spawn edildi: &f{id}"
+  spawn_failed: "&cBoss spawn edilemedi!"
+  spawn_limit: "&7- Maksimum sayıya ulaşılmış olabilir"
+  spawn_time: "&7- Zaman uygun olmayabilir (gece/gündüz)"
+  despawned: "&aBoss kaldırıldı: &f{id}"
+  despawned_all: "&aTüm boss'lar kaldırıldı!"
+  location_set: "&aSpawn noktası ayarlandı: &f{id}"
+  location_coords: "&7Konum: &f{x}, {y}, {z}"
+  location_error: "&cSpawn noktası ayarlanırken bir hata oluştu!"
+  autospawn_on: "&aOtomatik spawn &fAÇILDI&a: &f{id}"
+  autospawn_off: "&cOtomatik spawn &fKAPATILDI&c: &f{id}"
+
+# GUI Mesajları
+gui:
+  boss_created: "&eBoss oluşturuldu: {id}"
+  boss_exists: "&cHata: Bu isimde boss zaten var."
+  boss_deleted: "&aBoss silindi."
+  delete_cancelled: "&cSilme iptal edildi."
+  equipment_set: "&e{slot} ayarlandı!"
+  equipment_removed: "&e{slot} silindi!"
+  drop_added: "&eDrop eklendi: {item} x{amount}"
+  drop_removed: "&eDrop silindi!"
+  command_added: "&eKomut eklendi: {command}"
+  command_removed: "&eKomut silindi!"
+  command_updated: "&eKomut güncellendi!"
+  location_saved: "&eLokasyon kaydedildi!"
+  time_set: "&e{type} saati ayarlandı: {time}"
+  time_invalid: "&eGeçersiz format! Örnek: {example}"
+  time_reset: "&eZaman ayarları sıfırlandı!"
+  ability_created: "&eYetenek eklendi: {id}"
+  ability_removed: "&eYetenek silindi: {id}"
+  phase_created: "&eYeni faz eklendi!"
+  phase_removed: "&eFaz silindi!"
+  spawn_success: "&eBoss başarıyla spawn edildi!"
+  spawn_failed: "&eBoss spawn edilemedi! (Limit dolmuş olabilir)"
+  despawn_success: "&eBu boss'un aktif kopyaları kaldırıldı!"
+
+# Girdi İstemleri
+input:
+  new_boss_name: "&eYeni boss için bir isim yazın (iptal için 'iptal' yazın):"
+  display_name: "&eYeni görünen isim yazın (renk kodları & destekli):"
+  confirm_delete: "&eSİLMEK için 'onayla' yazın (iptal için başka bir şey):"
+  new_command: "&eYeni komutu yazın (/ olmadan):"
+  command_placeholders: "&7Placeholders: {player}, {boss}, {x}, {y}, {z}, {world}"
+  start_hour: "&eBaşlangıç saatini yazın (Format: HH:mm, örn: 09:00):"
+  end_hour: "&eBitiş saatini yazın (Format: HH:mm, örn: 21:00):"
+  new_ability: "&eYeni yetenek için bir ID yazın (örn: fireball):"
+  ability_name: "&eYeni yetenek adını yazın:"
+  ability_message: "&eYetenek mesajını yazın (boş için 'yok'):"
+  ability_sound: "&eSes adını yazın (örn: ENTITY_BLAZE_SHOOT):"
+  ability_particle: "&eParçacık adını yazın (örn: FLAME):"
+  phase_name: "&eYeni faz adını yazın:"
+  phase_message: "&eFaz başlangıç mesajını yazın:"
+  click_inventory: "&eEnvanterinden bir eşyaya tıkla!"
+  cancelled: "&eİşlem iptal edildi."
+
+# Boss Olayları
+events:
+  boss_spawn: "&6&l{boss} &eortaya çıktı!"
+  boss_death: "&6&l{boss} &f{player} &etarafından yenildi!"
+  boss_phase: "&6&l{boss} &c{phase} &efazına geçti!"
+  boss_ability: "&6&l{boss} &d{ability} &eyeteneğini kullandı!"
+
+# Yardım Mesajları
+help:
+  header: "&6&l═══════════ nmBosses Yardım ═══════════"
+  list: "&e/nm list &7- Tüm boss'ları listeler"
+  create: "&e/nm create <isim> [tip] &7- Yeni boss oluşturur"
+  delete: "&e/nm delete <isim> &7- Boss'u siler"
+  spawn: "&e/nm spawn <isim> &7- Boss'u spawn eder"
+  despawn: "&e/nm despawn <isim|all> &7- Boss'u kaldırır"
+  setspawn: "&e/nm setspawn <isim> &7- Spawn noktası belirler"
+  autospawn: "&e/nm autospawn <isim> &7- Otomatik spawn açar/kapatır"
+  info: "&e/nm info <isim> &7- Boss bilgilerini gösterir"
+  edit: "&e/nm edit <isim> &7- Düzenleme bilgisi gösterir"
+  gui: "&e/nm gui &7- Boss yönetim menüsünü açar"
+  reload: "&e/nm reload &7- Eklentiyi yeniden yükler"
+  aliases: "&7Alternatif: &f/nmbosses, /nmboss, /boss, /bosses"
+  footer: "&6&l══════════════════════════════════════"
+
+# Bilgi Gösterimi
+info:
+  header: "&6&l═══════════ Boss Bilgisi ═══════════"
+  id: "&eID: &f{id}"
+  name: "&eİsim: {name}"
+  type: "&eTip: &f{type} &7({entity})"
+  stats_header: "&6&l--- Özellikler ---"
+  health: "&eCan: &c{health} ❤"
+  damage: "&eHasar: &c{damage}"
+  speed: "&eHız: &f{speed}"
+  kb_resistance: "&eKnockback Direnci: &f{value}%"
+  kb_power: "&eKnockback Gücü: &f{value}"
+  attack_speed: "&eSaldırı Hızı: &f{value}"
+  follow_range: "&eGörme Mesafesi: &f{value} blok"
+  attack_range: "&eSaldırı Menzili: &f{value} blok"
+  appearance_header: "&6&l--- Görünüm ---"
+  glow: "&eGlow: {status}"
+  name_visible: "&eİsim Görünür: {status}"
+  show_health: "&eCan Göster: {status}"
+  bossbar: "&eBossBar: {status}"
+  rewards_header: "&6&l--- Ödüller ---"
+  xp: "&eXP: &f{xp}"
+  drop_chance: "&eDrop Şansı: &f{chance}%"
+  drop_count: "&eDrop Sayısı: &f{count}"
+  command_count: "&eKomut Sayısı: &f{count}"
+  spawn_header: "&6&l--- Spawn Ayarları ---"
+  auto_spawn: "&eOtomatik Spawn: {status}"
+  respawn_delay: "&eRespawn Süresi: &f{delay} saniye"
+  max_count: "&eMaksimum Sayı: &f{count}"
+  active_count: "&eAktif: &f{active}/{max}"
+  spawn_time: "&eSpawn Zamanı: {time}"
+  spawn_location: "&eSpawn Noktası: &f{world} {x}, {y}, {z}"
+  spawn_location_none: "&eSpawn Noktası: &cAyarlanmamış"
+  abilities_header: "&6&l--- Yetenekler ---"
+  phases_header: "&6&l--- Faz Sistemi ---"
+  footer: "&6&l═════════════════════════════════════"
+
+# Zaman Gösterimi
+time:
+  day: "&e☀ Gündüz"
+  night: "&9☾ Gece"
+  always: "&fHer zaman"
+
+# Durum Gösterimi
+status:
+  enabled: "&a✔"
+  disabled: "&c✘"
+  active: "&aAktif"
+  inactive: "&cPasif"
+  on: "&aAÇIK"
+  off: "&cKAPALI"

@@ -1,0 +1,47 @@
+name: nmBosses
+version: 1.1.0
+main: com.noramu.nmbosses.NmBosses
+api-version: "1.20"
+authors: [Noramu]
+description: Advanced boss plugin - Abilities, Phase System, Day/Night Spawn
+website: https://noramu.com.tr
+
+softdepend:
+  - ItemsAdder
+  - MythicMobs
+  - Nexo
+  - ModelEngine
+  - Oraxen
+  - PlaceholderAPI
+
+commands:
+  nmbosses:
+    description: nmBosses main command
+    aliases: [nm, nmboss, boss, bosses]
+    permission: nmbosses.admin
+
+permissions:
+  nmboss.*:
+    description: Full nmBosses admin permission
+    default: op
+    children:
+      nmboss.spawn: true
+      nmboss.create: true
+      nmboss.delete: true
+      nmboss.reload: true
+      nmboss.gui: true
+  nmboss.spawn:
+    description: Boss spawn permission
+    default: op
+  nmboss.create:
+    description: Boss create permission
+    default: op
+  nmboss.delete:
+    description: Boss delete permission
+    default: op
+  nmboss.reload:
+    description: Plugin reload permission
+    default: op
+  nmboss.gui:
+    description: GUI access permission
+    default: op

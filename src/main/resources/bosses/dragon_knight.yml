@@ -1,0 +1,379 @@
+# ═══════════════════════════════════════════════════════════
+#                    DRAGON KNIGHT BOSS
+#              nmBosses - Kapsamlı Boss Dosyası
+# ═══════════════════════════════════════════════════════════
+
+# Boss görünen adı (renk kodları için & kullanın)
+displayName: "&c&l⚔ Dragon Knight ⚔"
+
+# Boss tipi: MELEE (yakın dövüş), RANGED (menzilli), TANK (dayanıklı), MAGE (büyücü), HYBRID (karma)
+bossType: MELEE
+
+# Boss entity tipi (ZOMBIE, SKELETON, WITHER_SKELETON, PIGLIN_BRUTE, VINDICATOR, vb.)
+entityType: ZOMBIE
+
+# ═══════════════════════════════════════
+#           TEMEL ÖZELLİKLER
+# ═══════════════════════════════════════
+
+# Boss'un toplam canı (kalp sayısı x 2)
+health: 500
+
+# Boss'un saldırı hasarı (vuruş gücü)
+damage: 15
+
+# Boss'un hareket hızı (varsayılan: 0.25, zombi: 0.23, iskelet: 0.25)
+speed: 0.28
+
+# Geri savrulma direnci (0.0 = hiç direnç yok, 1.0 = tam direnç, savrulmaz)
+knockbackResistance: 0.8
+
+# Saldırı hızı (1.0 = normal, 2.0 = iki kat hızlı)
+attackSpeed: 1.2
+
+# Oyuncuyu görme mesafesi (kaç bloktan oyuncuyu fark eder)
+followRange: 40
+
+# Saldırı menzili (kaç blok uzaklıktan saldırabilir)
+attackRange: 3
+
+# Knockback gücü - vurunca oyuncuyu ne kadar uzağa atar (0.0 = normal, 1.0 = çok güçlü)
+knockbackPower: 0.6
+
+# ═══════════════════════════════════════
+#           GÖRÜNÜM AYARLARI
+# ═══════════════════════════════════════
+
+# Boss'un glow (parlama) efekti olsun mu?
+glowing: true
+
+# Glow rengi: BLACK, DARK_BLUE, DARK_GREEN, DARK_AQUA, DARK_RED, DARK_PURPLE,
+#             GOLD, GRAY, DARK_GRAY, BLUE, GREEN, AQUA, RED, LIGHT_PURPLE, YELLOW, WHITE
+glowColor: RED
+
+# Boss'un adı başının üstünde görünsün mü?
+nameVisible: true
+
+# Boss'un canı başının üstünde sayı olarak görünsün mü?
+showHealth: true
+
+# BossBar (ekranın üstündeki can çubuğu) ayarları
+bossBar:
+  # BossBar gösterilsin mi?
+  enabled: true
+  # Renk: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  color: RED
+  # Stil: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+  style: SEGMENTED_10
+
+# ═══════════════════════════════════════
+#           ZIRH VE EKİPMAN
+# ═══════════════════════════════════════
+
+# Zırh parçaları (AIR = yok)
+armor:
+  helmet: NETHERITE_HELMET
+  chestplate: NETHERITE_CHESTPLATE
+  leggings: NETHERITE_LEGGINGS
+  boots: NETHERITE_BOOTS
+
+# Ekipman
+equipment:
+  # Ana el (silah)
+  mainHand: NETHERITE_SWORD
+  # Yan el (kalkan için SHIELD yazın)
+  offHand: SHIELD
+  # Kalkan var mı? (true/false)
+  shield: true
+
+# ═══════════════════════════════════════
+#              ÖDÜLLER
+# ═══════════════════════════════════════
+
+rewards:
+  # Verilecek XP miktarı
+  xp: 500
+
+  # Drop şansı (0-100 arası yüzde)
+  dropChance: 100
+
+  # Düşecek eşyalar
+  # FORMAT: MATERIAL:MIKTAR veya MATERIAL:MIKTAR:ENCHANT:SEVIYE:ENCHANT:SEVIYE
+  # Örnek: NETHERITE_SWORD:1:sharpness:5:unbreaking:3
+  items:
+    - "DIAMOND:5"
+    - "NETHERITE_INGOT:1"
+    - "GOLDEN_APPLE:3"
+    - "EXPERIENCE_BOTTLE:10"
+    - "ENCHANTED_GOLDEN_APPLE:1"
+    - "NETHERITE_SWORD:1:sharpness:5:fire_aspect:2"
+    - "DIAMOND_CHESTPLATE:1:protection:4:unbreaking:3"
+
+  # Çalıştırılacak komutlar
+  # Placeholder'lar: {player}, {boss}, {x}, {y}, {z}, {world}
+  commands:
+    - "broadcast &6{player} &e%boss% &6adlı boss'u öldürdü!"
+    - "give {player} diamond 10"
+    - "eco give {player} 1000"
+
+# ═══════════════════════════════════════
+#             MESAJLAR
+# ═══════════════════════════════════════
+
+messages:
+  # Boss spawn olduğunda gönderilecek mesaj (boş bırakılırsa gönderilmez)
+  spawn: "&c&l⚠ &eDragon Knight &cspawn oldu! &7({x}, {y}, {z})"
+
+  # Boss öldüğünde gönderilecek mesaj
+  death: "&a&l✓ &eDragon Knight &a{player} tarafından yenildi!"
+
+  # Periyodik mesajlar (sırayla gönderilir)
+  periodic:
+    - "&c[Dragon Knight] &7Sizi yok edeceğim!"
+    - "&c[Dragon Knight] &7Güçsüz ölümlüler..."
+    - "&c[Dragon Knight] &7Kaçmayı deneyin bile!"
+    - "&c[Dragon Knight] &7Karanlık güçler benim yanımda!"
+
+  # Periyodik mesaj aralığı (saniye)
+  periodicInterval: 30
+
+# ═══════════════════════════════════════
+#           SPAWN AYARLARI
+# ═══════════════════════════════════════
+
+spawn:
+  # Otomatik spawn aktif mi?
+  autoSpawn: false
+
+  # Yeniden doğma süresi (saniye olarak)
+  respawnDelay: 300
+
+  # Aynı anda maksimum kaç tane boss olabilir?
+  maxCount: 1
+
+  # Minecraft Spawn zamanı: DAY (sadece gündüz), NIGHT (sadece gece), ALWAYS (her zaman)
+  time: ALWAYS
+
+  # Gerçek Dünya Zaman Ayarları
+  schedule:
+    # Hangi günlerde spawn olacak? (Boş = Her gün)
+    # Değerler: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    days:
+      - FRIDAY
+      - SATURDAY
+      - SUNDAY
+    # Spawn başlangıç saati (Format: HH:mm)
+    startHour: "20:00"
+    # Spawn bitiş saati (Format: HH:mm)
+    endHour: "23:00"
+
+  # Spawn lokasyonu (/boss setspawn komutu ile ayarlanabilir)
+  location:
+    world: world
+    x: 0
+    y: 64
+    z: 0
+    yaw: 0
+    pitch: 0
+
+# ═══════════════════════════════════════
+#         SES EFEKTLERİ
+# ═══════════════════════════════════════
+
+sounds:
+  # Spawn sesi
+  spawn: ENTITY_ENDER_DRAGON_GROWL
+  # Ölüm sesi
+  death: ENTITY_ENDER_DRAGON_DEATH
+  # Hasar alma sesi
+  hit: ENTITY_IRON_GOLEM_HURT
+  # Saldırı sesi
+  attack: ENTITY_PLAYER_ATTACK_STRONG
+
+# ═══════════════════════════════════════
+#         PARÇACIK EFEKTLERİ
+# ═══════════════════════════════════════
+
+particles:
+  # Spawn parçacıkları
+  spawn: EXPLOSION_LARGE
+  # Ölüm parçacıkları
+  death: EXPLOSION_HUGE
+  # Saldırı parçacıkları
+  attack: CRIT
+
+# ═══════════════════════════════════════
+#         MODEL PLUGIN AYARLARI
+# ═══════════════════════════════════════
+# Boss'a custom model eklemek için
+
+models:
+  # ModelEngine desteği
+  modelEngine:
+    # ModelEngine aktif mi?
+    enabled: false
+    # Model ID (ModelEngine'de tanımlı model)
+    modelId: "dragon_knight_model"
+    # Animasyon ID'si (idle, attack, death, vb.)
+    animations:
+      idle: "idle"
+      attack: "attack"
+      death: "death"
+      walk: "walk"
+
+  # MythicMobs desteği
+  mythicMobs:
+    # MythicMobs aktif mi?
+    enabled: false
+    # MythicMob tipi (MythicMobs'da tanımlı mob)
+    mobType: "dragon_knight"
+    # Özel yetenekler (MythicMobs abilities)
+    abilities:
+      - "fireball_ability"
+      - "summon_ability"
+      - "poison_ability"
+
+  # Oraxen Model Desteği
+  oraxen:
+    # Oraxen aktif mi?
+    enabled: false
+    # Oraxen model ID'si
+    modelId: "dragon_knight_model"
+
+  # ItemsAdder Model Desteği
+  itemsAdder:
+    # ItemsAdder aktif mi?
+    enabled: false
+    # ItemsAdder model ID'si
+    modelId: "dragon_knight_model"
+
+  # Nexo Model Desteği
+  nexo:
+    # Nexo aktif mi?
+    enabled: false
+    # Nexo model ID'si
+    modelId: "dragon_knight_model"
+
+# ═══════════════════════════════════════
+#         ÖZEL YETENEKLER
+# ═══════════════════════════════════════
+
+abilities:
+  # Yetenekler aktif mi?
+  enabled: true
+
+  # Yetenek listesi
+  list:
+    # Ateş Topu yeteneği
+    fireball:
+      name: "Ateş Topu"
+      # Tipler: FIREBALL, LIGHTNING, TELEPORT, SUMMON, HEAL, EXPLOSION,
+      #         POISON/EFFECT, PULL, PUSH, METEOR, GROUND_SLAM, CHARGE
+      type: FIREBALL
+      cooldown: 15 # Bekleme süresi (saniye)
+      chance: 30 # Kullanma şansı (%)
+      damage: 8 # Hasar miktarı
+      range: 20 # Menzil
+      message: "&c[Dragon Knight] &7Yanacaksınız!"
+      sound: ENTITY_BLAZE_SHOOT
+      particle: FLAME
+
+    # Minyon çağırma yeteneği
+    summon:
+      name: "Minyon Çağırma"
+      type: SUMMON
+      cooldown: 30
+      chance: 20
+      range: 15
+      summonType: ZOMBIE # Çağırılacak mob tipi
+      summonCount: 3 # Çağırılacak mob sayısı
+      message: "&c[Dragon Knight] &7Yardıma gelin!"
+      sound: ENTITY_EVOKER_PREPARE_SUMMON
+      particle: SMOKE_LARGE
+
+    # Zehir efekti yeteneği
+    poison:
+      name: "Zehirli Saldırı"
+      type: EFFECT
+      cooldown: 20
+      chance: 25
+      range: 5
+      effectType: POISON # Efekt tipi
+      effectDuration: 100 # Süre (tick, 20 tick = 1 saniye)
+      effectAmplifier: 1 # Efekt seviyesi (0 = seviye 1)
+      message: "&2[Dragon Knight] &7Zehrin tadına bakın!"
+      sound: ENTITY_SPIDER_AMBIENT
+      particle: VILLAGER_HAPPY
+
+    # Yere vurma yeteneği
+    groundslam:
+      name: "Deprem"
+      type: GROUND_SLAM
+      cooldown: 25
+      chance: 15
+      damage: 10
+      range: 8
+      message: "&c[Dragon Knight] &7Yer sarsılıyor!"
+      sound: ENTITY_IRON_GOLEM_DEATH
+      particle: BLOCK_CRACK
+
+# ═══════════════════════════════════════
+#         FAZ SİSTEMİ
+# ═══════════════════════════════════════
+# Belirli can yüzdelerinin altına düşünce boss güçlenir
+
+phases:
+  # Faz sistemi aktif mi?
+  enabled: true
+
+  # Faz listesi
+  list:
+    # Faz 1: Can %50'nin altına düşünce
+    phase1:
+      number: 1
+      name: "Öfkeli"
+      healthThreshold: 50 # Bu yüzdenin altına düşünce aktif olur
+
+      # Güçlenme çarpanları
+      damageMultiplier: 1.5 # Hasar x1.5 olur
+      speedMultiplier: 1.2 # Hız x1.2 olur
+      attackSpeedMultiplier: 1.3 # Saldırı hızı x1.3 olur
+
+      # Görünüm değişiklikleri
+      glowing: true
+      bossBarColor: YELLOW
+      nameColor: "&e" # İsim rengi değişir
+
+      # Faz başladığında
+      startMessage: "&e&l⚠ Dragon Knight öfkeleniyor!"
+      startSound: ENTITY_ENDER_DRAGON_GROWL
+      startParticle: EXPLOSION_LARGE
+
+      # Özel efektler
+      regeneration: false # Can yenileme aktif mi?
+      regenerationAmount: 0 # Saniyede yenilenecek can
+      invulnerableOnChange: true # Faz değişiminde kısa süre hasar almaz mı?
+      invulnerableDuration: 40 # Dokunulmazlık süresi (tick)
+
+    # Faz 2: Can %25'in altına düşünce
+    phase2:
+      number: 2
+      name: "Çılgınlık"
+      healthThreshold: 25
+
+      damageMultiplier: 2.0
+      speedMultiplier: 1.5
+      attackSpeedMultiplier: 1.5
+
+      glowing: true
+      bossBarColor: RED
+      nameColor: "&4"
+
+      startMessage: "&4&l⚠ Dragon Knight çıldırıyor! DİKKAT!"
+      startSound: ENTITY_WITHER_SPAWN
+      startParticle: EXPLOSION_HUGE
+
+      regeneration: true
+      regenerationAmount: 2 # Saniyede 2 can yenilenir
+      invulnerableOnChange: true
+      invulnerableDuration: 60

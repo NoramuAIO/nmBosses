@@ -1,0 +1,156 @@
+# ═══════════════════════════════════════════════════════════
+#                 nmBosses - English Messages
+#                      Language: English
+# ═══════════════════════════════════════════════════════════
+
+# Prefix for all messages
+prefix: "&8[&6nmBosses&8] "
+
+# General Messages
+general:
+  no_permission: "&cYou don't have permission to use this command!"
+  player_only: "&cThis command can only be used by players!"
+  unknown_command: "&cUnknown command! Type /boss help"
+  reload_success: "&aPlugin reloaded successfully!"
+  reload_count: "&7Loaded bosses: &f{count}"
+  active_preserved: "&7Active bosses preserved and settings updated."
+
+# Boss Management
+boss:
+  not_found: "&cNo boss found with this name!"
+  already_exists: "&cA boss with this name already exists!"
+  created: "&aBoss created successfully: &f{id}"
+  deleted: "&aBoss deleted successfully: &f{id}"
+  create_error: "&cAn error occurred while creating the boss!"
+  delete_error: "&cAn error occurred while deleting the boss!"
+  spawned: "&aBoss spawned: &f{id}"
+  spawn_failed: "&cBoss could not be spawned!"
+  spawn_limit: "&7- Maximum count may have been reached"
+  spawn_time: "&7- Time may not be suitable (day/night)"
+  despawned: "&aBoss removed: &f{id}"
+  despawned_all: "&aAll bosses removed!"
+  location_set: "&aSpawn location set: &f{id}"
+  location_coords: "&7Location: &f{x}, {y}, {z}"
+  location_error: "&cAn error occurred while setting spawn location!"
+  autospawn_on: "&aAuto spawn &fENABLED&a: &f{id}"
+  autospawn_off: "&cAuto spawn &fDISABLED&c: &f{id}"
+
+# GUI Messages
+gui:
+  boss_created: "&eBoss created: {id}"
+  boss_exists: "&cError: A boss with this name already exists."
+  boss_deleted: "&aBoss deleted."
+  delete_cancelled: "&cDeletion cancelled."
+  equipment_set: "&e{slot} set!"
+  equipment_removed: "&e{slot} removed!"
+  drop_added: "&eDrop added: {item} x{amount}"
+  drop_removed: "&eDrop removed!"
+  command_added: "&eCommand added: {command}"
+  command_removed: "&eCommand removed!"
+  command_updated: "&eCommand updated!"
+  location_saved: "&eLocation saved!"
+  time_set: "&e{type} time set: {time}"
+  time_invalid: "&eInvalid format! Example: {example}"
+  time_reset: "&eTime settings reset!"
+  ability_created: "&eAbility added: {id}"
+  ability_removed: "&eAbility removed: {id}"
+  phase_created: "&eNew phase added!"
+  phase_removed: "&ePhase removed!"
+  spawn_success: "&eBoss spawned successfully!"
+  spawn_failed: "&eBoss could not be spawned! (Limit may be reached)"
+  despawn_success: "&eActive copies of this boss removed!"
+
+# Input Prompts
+input:
+  new_boss_name: "&eEnter a name for the new boss (type 'cancel' to cancel):"
+  display_name: "&eEnter new display name (color codes & supported):"
+  confirm_delete: "&eTo DELETE type 'confirm' (anything else to cancel):"
+  new_command: "&eEnter the new command (without /):"
+  command_placeholders: "&7Placeholders: {player}, {boss}, {x}, {y}, {z}, {world}"
+  start_hour: "&eEnter start time (Format: HH:mm, e.g.: 09:00):"
+  end_hour: "&eEnter end time (Format: HH:mm, e.g.: 21:00):"
+  new_ability: "&eEnter an ID for the new ability (e.g.: fireball):"
+  ability_name: "&eEnter new ability name:"
+  ability_message: "&eEnter ability message (type 'none' for empty):"
+  ability_sound: "&eEnter sound name (e.g.: ENTITY_BLAZE_SHOOT):"
+  ability_particle: "&eEnter particle name (e.g.: FLAME):"
+  phase_name: "&eEnter new phase name:"
+  phase_message: "&eEnter phase start message:"
+  click_inventory: "&eClick an item from your inventory!"
+  cancelled: "&eOperation cancelled."
+
+# Boss Events
+events:
+  boss_spawn: "&6&l{boss} &ehas appeared!"
+  boss_death: "&6&l{boss} &ehas been defeated by &f{player}&e!"
+  boss_phase: "&6&l{boss} &ehas entered &c{phase}&e!"
+  boss_ability: "&6&l{boss} &eused &d{ability}&e!"
+
+# Help Messages
+help:
+  header: "&6&l═══════════ nmBosses Help ═══════════"
+  list: "&e/nm list &7- List all bosses"
+  create: "&e/nm create <name> [type] &7- Create new boss"
+  delete: "&e/nm delete <name> &7- Delete boss"
+  spawn: "&e/nm spawn <name> &7- Spawn boss"
+  despawn: "&e/nm despawn <name|all> &7- Remove boss"
+  setspawn: "&e/nm setspawn <name> &7- Set spawn point"
+  autospawn: "&e/nm autospawn <name> &7- Toggle auto spawn"
+  info: "&e/nm info <name> &7- Show boss info"
+  edit: "&e/nm edit <name> &7- Show edit info"
+  gui: "&e/nm gui &7- Open boss management menu"
+  reload: "&e/nm reload &7- Reload plugin"
+  aliases: "&7Aliases: &f/nmbosses, /nmboss, /boss, /bosses"
+  footer: "&6&l══════════════════════════════════════"
+
+# Info Display
+info:
+  header: "&6&l═══════════ Boss Info ═══════════"
+  id: "&eID: &f{id}"
+  name: "&eName: {name}"
+  type: "&eType: &f{type} &7({entity})"
+  stats_header: "&6&l--- Stats ---"
+  health: "&eHealth: &c{health} ❤"
+  damage: "&eDamage: &c{damage}"
+  speed: "&eSpeed: &f{speed}"
+  kb_resistance: "&eKnockback Resistance: &f{value}%"
+  kb_power: "&eKnockback Power: &f{value}"
+  attack_speed: "&eAttack Speed: &f{value}"
+  follow_range: "&eFollow Range: &f{value} blocks"
+  attack_range: "&eAttack Range: &f{value} blocks"
+  appearance_header: "&6&l--- Appearance ---"
+  glow: "&eGlow: {status}"
+  name_visible: "&eName Visible: {status}"
+  show_health: "&eShow Health: {status}"
+  bossbar: "&eBossBar: {status}"
+  rewards_header: "&6&l--- Rewards ---"
+  xp: "&eXP: &f{xp}"
+  drop_chance: "&eDrop Chance: &f{chance}%"
+  drop_count: "&eDrop Count: &f{count}"
+  command_count: "&eCommand Count: &f{count}"
+  spawn_header: "&6&l--- Spawn Settings ---"
+  auto_spawn: "&eAuto Spawn: {status}"
+  respawn_delay: "&eRespawn Delay: &f{delay} seconds"
+  max_count: "&eMax Count: &f{count}"
+  active_count: "&eActive: &f{active}/{max}"
+  spawn_time: "&eSpawn Time: {time}"
+  spawn_location: "&eSpawn Location: &f{world} {x}, {y}, {z}"
+  spawn_location_none: "&eSpawn Location: &cNot set"
+  abilities_header: "&6&l--- Abilities ---"
+  phases_header: "&6&l--- Phase System ---"
+  footer: "&6&l═════════════════════════════════════"
+
+# Time Display
+time:
+  day: "&e☀ Day"
+  night: "&9☾ Night"
+  always: "&fAlways"
+
+# Status Display
+status:
+  enabled: "&a✔"
+  disabled: "&c✘"
+  active: "&aActive"
+  inactive: "&cInactive"
+  on: "&aON"
+  off: "&cOFF"

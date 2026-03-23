@@ -1,0 +1,63 @@
+# nmBosses Ana Konfigürasyon Dosyası
+# Geliştirici: Noramu
+
+# Dil Ayarları / Locale Settings
+locale:
+  # Varsayılan dil (en, tr, de, fr, es, pt, ru, zh, ja, ko)
+  # Default language
+  default: "tr"
+  
+  # Sunucu dili ayarı:
+  # - "auto": Sistem dilini otomatik algılar
+  # - "manual": default dilini kullanır
+  # - "tr", "en", vs.: Belirtilen dili kullanır
+  server: "manual"
+  
+  # Oyuncu dilini otomatik algıla (Minecraft client ayarından)
+  # false = tüm oyuncular sunucu dilini kullanır
+  auto-detect-player: false
+
+# Genel Ayarlar
+settings:
+  # Debug modu
+  debug: false
+
+  # Bossbar güncelleme aralığı (tick cinsinden, 20 tick = 1 saniye)
+  bossbar-update-interval: 10
+
+  # Bossbar görüntüleme mesafesi (blok)
+  bossbar-view-distance: 50
+
+  # Periyodik mesaj görüntüleme mesafesi (blok)
+  message-view-distance: 50
+
+# Varsayılan Boss Ayarları
+# Yeni oluşturulan boss'lar bu değerleri kullanır
+defaults:
+  health: 100
+  damage: 10
+  speed: 0.25
+  knockback-resistance: 0.5
+
+  glow: false
+  name-visible: true
+  show-health: true
+
+  bossbar:
+    enabled: true
+    color: RED
+    style: SOLID
+
+  spawn:
+    auto-spawn: false
+    respawn-delay: 300
+    max-count: 1
+
+  sounds:
+    spawn: ENTITY_ENDER_DRAGON_GROWL
+    death: ENTITY_ENDER_DRAGON_DEATH
+    hit: ENTITY_IRON_GOLEM_HURT
+
+  particles:
+    spawn: EXPLOSION_LARGE
+    death: EXPLOSION_HUGE
